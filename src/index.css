@@ -1,0 +1,269 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS for animations and effects */
+
+/* Galaxy background and floating symbols */
+.stars {
+  background: radial-gradient(2px 2px at 20px 30px, #eee, transparent),
+              radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
+              radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+              radial-gradient(1px 2px at 130px 80px, rgba(255,255,255,0.6), transparent),
+              radial-gradient(2px 1px at 160px 30px, rgba(255,255,255,0.9), transparent);
+  background-size: 200px 100px;
+  animation: stars 10s linear infinite;
+  opacity: 0.3;
+  position: absolute;
+  inset: 0;
+}
+
+@keyframes stars {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100px); }
+}
+
+.floating-symbols {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.symbol {
+  position: absolute;
+  color: rgba(34, 211, 238, 0.1);
+  font-size: 2rem;
+  font-weight: bold;
+  animation: float 15s infinite linear;
+}
+
+.symbol:nth-child(1) { left: 10%; animation-delay: -2s; animation-duration: 20s; }
+.symbol:nth-child(2) { left: 20%; animation-delay: -4s; animation-duration: 18s; }
+.symbol:nth-child(3) { left: 70%; animation-delay: -6s; animation-duration: 22s; }
+.symbol:nth-child(4) { left: 80%; animation-delay: -8s; animation-duration: 16s; }
+.symbol:nth-child(5) { left: 40%; animation-delay: -10s; animation-duration: 25s; }
+.symbol:nth-child(6) { left: 60%; animation-delay: -12s; animation-duration: 19s; }
+
+@keyframes float {
+  0% { 
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% { opacity: 0.1; }
+  90% { opacity: 0.1; }
+  100% { 
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Signature logo animation */
+.signature-logo {
+  background: linear-gradient(45deg, #22d3ee, #ec4899, #f97316);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 2s ease-in-out infinite alternate;
+  text-shadow: 0 0 20px rgba(34, 211, 238, 0.5);
+}
+
+@keyframes glow {
+  from {
+    filter: drop-shadow(0 0 20px rgba(34, 211, 238, 0.3));
+  }
+  to {
+    filter: drop-shadow(0 0 30px rgba(236, 72, 153, 0.5));
+  }
+}
+
+/* Typing animation */
+.typing-text {
+  position: relative;
+}
+
+.cursor-blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Neon glow effects */
+.neon-glow {
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.3);
+  transition: all 0.3s ease;
+}
+
+.neon-glow:hover {
+  box-shadow: 0 0 30px rgba(34, 211, 238, 0.6), 0 0 40px rgba(34, 211, 238, 0.4);
+}
+
+.glow-text:hover {
+  text-shadow: 0 0 10px rgba(34, 211, 238, 0.8);
+}
+
+/* Skills slider animation */
+.skill-slider {
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+.skill-track {
+  display: flex;
+  gap: 2rem;
+  animation: scroll-left 30s linear infinite;
+}
+
+.skill-card {
+  min-width: 250px;
+  flex-shrink: 0;
+  transform: perspective(1000px);
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: perspective(1000px) rotateY(-5deg) rotateX(5deg) translateZ(50px);
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Project card animations */
+.project-card {
+  transform: perspective(1000px);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: perspective(1000px) rotateY(-5deg) rotateX(5deg) translateZ(50px);
+}
+
+/* Certificate card animations */
+.cert-card {
+  transform: perspective(1000px);
+  transition: all 0.5s ease;
+}
+
+.cert-card:hover {
+  transform: perspective(1000px) rotateY(-5deg) rotateX(5deg) translateZ(30px);
+}
+
+/* Stats card animations */
+.stat-card {
+  transform: perspective(1000px);
+  transition: all 0.5s ease;
+}
+
+.stat-card:hover {
+  transform: perspective(1000px) rotateY(-3deg) rotateX(3deg) translateZ(20px);
+}
+
+/* Testimonial card animation */
+.testimonial-card {
+  transform: perspective(1000px);
+  transition: all 0.5s ease;
+}
+
+.testimonial-card:hover {
+  transform: perspective(1000px) rotateY(-2deg) rotateX(2deg) translateZ(10px);
+}
+
+/* Study and work illustrations */
+.study-illustration,
+.work-illustration {
+  position: relative;
+  min-height: 300px;
+}
+
+/* Contact form animation */
+.contact-form {
+  transform: perspective(1000px);
+  transition: all 0.3s ease;
+}
+
+.contact-form:hover {
+  transform: perspective(1000px) rotateY(-2deg) rotateX(2deg) translateZ(10px);
+}
+
+/* Animated gradient background */
+.animated-gradient {
+  background: linear-gradient(-45deg, #0F172A, #581C87, #000000, #1E293B);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Slow spin animation for profile picture glow */
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #22d3ee, #ec4899);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #0891b2, #be185d);
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+/* Dark theme transitions */
+.dark {
+  transition: all 0.3s ease;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .skill-card {
+    min-width: 200px;
+  }
+  
+  .symbol {
+    font-size: 1.5rem;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
