@@ -8,24 +8,26 @@ const Projects: React.FC = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce solution with Spring Boot and React',
-      image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg',
-      tech: ['Java', 'Spring Boot', 'React', 'MySQL'],
-      github: 'https://github.com',
-      live: 'https://example.com',
+      title: 'Smart Employee Management System',
+      description: 'A comprehensive full-stack application to manage employees, departments, and payroll. Features include employee CRUD operations, department-wise listing, payroll management, and an admin panel for centralized control, built with Spring MVC and MySQL.',
+      image: 'https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg',
+      tech: ['Java', 'Spring MVC', 'Hibernate', 'JSP', 'Servlet', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
+      github: 'https://github.com/your-username/employee-management-system',
+      live: 'https://your-deployed-link.com',
       glow: 'hover:shadow-orange-500'
-    },
+    }
+,        
     {
       id: 2,
-      title: 'Social Media Dashboard',
-      description: 'Analytics dashboard for social media management',
+      title: 'Online Examination System',
+      description: 'A secure and efficient web-based platform for conducting online exams with features like user authentication, dynamic question papers, timer-based exams, instant result generation, and admin panel for managing exams and students.',
       image: 'https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg',
-      tech: ['React', 'Node.js', 'MongoDB', 'Chart.js'],
-      github: 'https://github.com',
-      live: 'https://example.com',
-      glow: 'hover:shadow-blue-500'
+      tech: ['Java', 'JSP', 'Servlets', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
+      github: 'https://github.com/your-username/online-exam-system',
+      live: 'https://your-deployed-link.com',
+      glow: 'hover:shadow-green-500'
     },
+    
     {
       id: 3,
       title: 'Task Management App',
@@ -46,26 +48,7 @@ const Projects: React.FC = () => {
       live: 'https://example.com',
       glow: 'hover:shadow-cyan-500'
     },
-    {
-      id: 5,
-      title: 'Cryptocurrency Tracker',
-      description: 'Real-time crypto price tracking and portfolio management',
-      image: 'https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg',
-      tech: ['React', 'CoinGecko API', 'Chart.js'],
-      github: 'https://github.com',
-      live: 'https://example.com',
-      glow: 'hover:shadow-purple-500'
-    },
-    {
-      id: 6,
-      title: 'Learning Management System',
-      description: 'Complete LMS with course creation and student tracking',
-      image: 'https://images.pexels.com/photos/159844/cellular-education-classroom-159844.jpeg',
-      tech: ['Spring Boot', 'Angular', 'PostgreSQL'],
-      github: 'https://github.com',
-      live: 'https://example.com',
-      glow: 'hover:shadow-pink-500'
-    }
+
   ];
 
   const displayedProjects = showAll ? projects : projects.slice(0, 3);

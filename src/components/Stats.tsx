@@ -19,7 +19,7 @@ const Stats: React.FC = () => {
     },
     { 
       icon: Users, 
-      label: 'Clients Worked With', 
+      label: 'Collabrations with teammates', 
       value: counts.clients, 
       suffix: '+',
       color: 'from-blue-500 to-cyan-500',

@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
   const socialLinks = [
     { icon: Github, href: 'https://github.com/kuldeeprajput01', label: 'GitHub' },
     { icon: Linkedin, href: 'https://www.linkedin.com/in/kuldeeprajput2025/', label: 'LinkedIn' },
-    { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' },
+    { icon: Instagram, href: 'https://www.instagram.com/__kuldeep__._._?igsh=bXBtM3NmdGUzOXFu&utm_source=qr', label: 'Instagram' },
     { icon: Mail, href: 'mailto:kuldeeprajput2025new@gmail.com', label: 'Email' }
   ];
 

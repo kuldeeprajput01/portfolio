@@ -1,28 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Send, Mail, MapPin, Phone } from 'lucide-react';
 
 const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    location: '',
-    lookingForJob: 'no',
-    message: ''
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
-  };
-
   return (
     <section id="contact" className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-black animated-gradient">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,7 +61,11 @@ const Contact: React.FC = () => {
 
           {/* Contact Form */}
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 contact-form">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form
+              action="https://formspree.io/f/mpwjajow" // <-- ⚠️ REPLACE WITH YOUR FORM ID
+              method="POST"
+              className="space-y-6"
+            >
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
@@ -92,8 +75,6 @@ const Contact: React.FC = () => {
                     type="text"
                     id="name"
                     name="name"
-                    value={formData.name}
-                    onChange={handleChange}
                     className="w-full px-4 py-3 bg-slate-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
                     placeholder="Your name"
                     required
@@ -108,8 +89,6 @@ const Contact: React.FC = () => {
                     type="email"
                     id="email"
                     name="email"
-                    value={formData.email}
-                    onChange={handleChange}
                     className="w-full px-4 py-3 bg-slate-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
                     placeholder="your.email@example.com"
                     required
@@ -117,37 +96,17 @@ const Contact: React.FC = () => {
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="location" className="block text-sm font-medium text-gray-300 mb-2">
-                    Location
-                  </label>
-                  <input
-                    type="text"
-                    id="location"
-                    name="location"
-                    value={formData.location}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
-                    placeholder="Your city, country"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="lookingForJob" className="block text-sm font-medium text-gray-300 mb-2">
-                    Looking for Job?
-                  </label>
-                  <select
-                    id="lookingForJob"
-                    name="lookingForJob"
-                    value={formData.lookingForJob}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
-                  >
-                    <option value="no">No</option>
-                    <option value="yes">Yes</option>
-                  </select>
-                </div>
+              <div>
+                <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-300 mb-2">
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
+                  placeholder="Your phone number"
+                />
               </div>
 
               <div>
@@ -158,8 +117,6 @@ const Contact: React.FC = () => {
                   id="message"
                   name="message"
                   rows={6}
-                  value={formData.message}
-                  onChange={handleChange}
                   className="w-full px-4 py-3 bg-slate-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 resize-none"
                   placeholder="Tell me about your project..."
                   required

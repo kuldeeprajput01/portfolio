@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
   const socialLinks = [
     { icon: Github, href: 'https://github.com/kuldeeprajput01', color: 'hover:text-orange-400' },
     { icon: Linkedin, href: 'https://www.linkedin.com/in/kuldeeprajput2025/', color: 'hover:text-blue-400' },
-    { icon: Instagram, href: 'https://instagram.com', color: 'hover:text-pink-400' }
+    { icon: Instagram, href: 'https://www.instagram.com/__kuldeep__._._?igsh=bXBtM3NmdGUzOXFu&utm_source=qr', color: 'hover:text-pink-400' }
   ];
 
   return (
@@ -97,9 +97,9 @@ const Hero: React.FC = () => {
               </div>
 
               <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl lg:max-w-none leading-relaxed">
-                Passionate about creating innovative solutions and building amazing user experiences 
-                with cutting-edge technologies.
-              </p>
+  Crafting clean, scalable solutions and seamless user experiences with modern technologies.
+</p>
+
 
               {/* Social Links */}
               <div className="flex justify-center lg:justify-start space-x-8 mb-12">

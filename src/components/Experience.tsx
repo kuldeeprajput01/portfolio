@@ -4,32 +4,41 @@ import { Briefcase, Calendar, MapPin } from 'lucide-react';
 const Experience: React.FC = () => {
   const experience = [
     {
-      year: '2018–2019',
+      year: '2022–2023',
       role: 'Frontend Developer',
-      company: 'Globex Corp',
-      location: 'New York, NY',
-      description: 'Developed responsive web applications using React and modern JavaScript frameworks',
-      achievements: ['Built 15+ responsive websites', 'Improved page load speed by 40%', 'Led UI/UX redesign project'],
+      company: 'Unizz tech solutions',
+      location: 'Indore, MP',
+      description: 'Developed responsive web applications using Html,css and modern JavaScript frameworks',
+      achievements: ['Built 10+ responsive websites', 'Improved page load speed by 40%', 'Led UI/UX redesign project'],
       icon: '🎨'
     },
     {
-      year: '2019–2020',
-      role: 'Backend Developer',
-      company: 'Vehement Capital Partners',
-      location: 'San Francisco, CA',
-      description: 'Designed and implemented scalable backend services and APIs',
-      achievements: ['Built RESTful APIs handling 1M+ requests daily', 'Reduced server response time by 50%', 'Implemented microservices architecture'],
+      year: '2024 – 2025',
+      role: 'Java Backend Developer Intern',
+      company: 'Ypsilon IT Solutions',
+      location: 'Indore, MP',
+      description: 'Worked on backend development using Java, focusing on building and optimizing APIs, database integration, and scalable architecture.',
+      achievements: [
+        'Developed and integrated RESTful APIs for core modules',
+        'Optimized database queries to improve performance by 30%',
+        'Contributed to the design of a microservices-based architecture'
+      ],
       icon: '⚙️'
-    },
+    }
+    ,
     {
-      year: '2020–Present',
+      year: '2025 – Present',
       role: 'Full Stack Developer',
-      company: 'Wonka Industries',
+     
       location: 'Remote',
-      description: 'Leading full-stack development projects and mentoring junior developers',
-      achievements: ['Delivered 20+ full-stack applications', 'Mentored 5 junior developers', 'Increased team productivity by 30%'],
+      description: 'Leading end-to-end full-stack development projects, collaborating with cross-functional teams, and mentoring junior developers to deliver scalable web solutions.',
+      achievements: [
+        'Delivered 10+ responsive full-stack applications using modern tech stack',
+        
+      ],
       icon: '🚀'
     }
+    
   ];
 
   return (

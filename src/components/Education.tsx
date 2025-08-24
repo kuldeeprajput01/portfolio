@@ -4,24 +4,24 @@ import { GraduationCap, Calendar } from 'lucide-react';
 const Education: React.FC = () => {
   const education = [
     {
-      year: '2007–2015',
+      year: '2020–2022',
       degree: 'Higher Secondary',
-      school: 'Marble Hills Middle School',
+      school: 'Master Mind Convent School ,Sarangpur',
       description: 'Completed secondary education with focus on Science and Mathematics',
       icon: '🎓'
     },
     {
-      year: '2015–2019',
-      degree: 'B.Tech in Computer Science',
-      school: 'Somerset School of Science',
+      year: '2022–2025',
+      degree: 'Bachelor of Computer Application',
+      school: 'Renaissance University ,Indore',
       description: 'Graduated with honors, specialized in Software Engineering and Data Structures',
       icon: '💻'
     },
     {
-      year: '2019–Present',
-      degree: 'M.Tech in Computer Science',
-      school: 'Hawking University',
-      description: 'Currently pursuing advanced studies in Machine Learning and AI',
+      year: '2025–Present',
+      degree: 'Master of Computer Application',
+      school: 'Medicaps University ,Indore',
+      description: 'Currently pursuing advanced studies in Computer Science',
       icon: '🚀'
     }
   ];

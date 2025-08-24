@@ -2,13 +2,13 @@ import React from 'react';
 
 const Skills: React.FC = () => {
   const skills = [
-    { name: 'Java', color: 'from-orange-500 to-red-500', glow: 'shadow-orange-500' },
-    { name: 'Spring Boot', color: 'from-green-500 to-emerald-500', glow: 'shadow-green-500' },
-    { name: 'React.js', color: 'from-blue-500 to-cyan-500', glow: 'shadow-blue-500' },
+    { name: ' Core Java', color: 'from-orange-500 to-red-500', glow: 'shadow-orange-500' },
+    { name: '  Advance java', color: 'from-green-500 to-emerald-500', glow: 'shadow-green-500' },
+    { name: 'J2EE', color: 'from-blue-500 to-cyan-500', glow: 'shadow-blue-500' },
     { name: 'MySQL', color: 'from-blue-600 to-indigo-600', glow: 'shadow-blue-600' },
-    { name: 'Node.js', color: 'from-green-600 to-lime-600', glow: 'shadow-green-600' },
-    { name: 'Python', color: 'from-yellow-500 to-orange-500', glow: 'shadow-yellow-500' },
-    { name: 'Docker', color: 'from-blue-400 to-cyan-400', glow: 'shadow-blue-400' },
+    { name: 'HTML', color: 'from-green-600 to-lime-600', glow: 'shadow-green-600' },
+    { name: 'CSS', color: 'from-yellow-500 to-orange-500', glow: 'shadow-yellow-500' },
+    { name: 'Java Script', color: 'from-blue-400 to-cyan-400', glow: 'shadow-blue-400' },
     { name: 'AWS', color: 'from-yellow-600 to-orange-600', glow: 'shadow-yellow-600' }
   ];
 
