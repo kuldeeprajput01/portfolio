@@ -6,7 +6,7 @@ const Stats: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
-  const finalCounts = { projects: 15, clients: 10, certificates: 7, hours: 1000 };
+  const finalCounts = { projects: 7, clients: 10, certificates: 5, hours: 500 };
 
   const stats = [
     { 
@@ -86,13 +86,13 @@ const Stats: React.FC = () => {
   };
 
   return (
-    <section ref={sectionRef} className="py-20 bg-slate-800">
+    <section ref={sectionRef} className="py-20 bg-gray-100 dark:bg-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-pink-500 to-orange-500 bg-clip-text text-transparent mb-6">
             Achievements
           </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Numbers that showcase my dedication and expertise
           </p>
         </div>
@@ -118,7 +118,7 @@ const Stats: React.FC = () => {
                 </div>
                 
                 {/* Animated progress bar */}
-                <div className="mt-4 bg-white/20 rounded-full h-2 overflow-hidden">
+                <div className="mt-4 bg-white/30 dark:bg-white/20 rounded-full h-2 overflow-hidden">
                   <div
                     className="h-full bg-white rounded-full transition-all duration-2000 ease-out"
                     style={{

@@ -62,19 +62,19 @@ const Testimonials: React.FC = () => {
   const current = testimonials[currentTestimonial];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <section className="py-20 bg-gray-100 dark:bg-gradient-to-br dark:from-slate-900 dark:via-purple-900 dark:to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-pink-500 to-orange-500 bg-clip-text text-transparent mb-6">
             What People Say
           </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Testimonials from clients and colleagues I've worked with
           </p>
         </div>
 
         <div className="relative max-w-4xl mx-auto">
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 md:p-12 testimonial-card hover:bg-slate-800/70 transition-all duration-500">
+          <div className="bg-white dark:bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 md:p-12 testimonial-card hover:bg-gray-50 dark:hover:bg-slate-800/70 transition-all duration-500 shadow-xl">
             {/* Quote Icon */}
             <div className="text-center mb-8">
               <Quote size={48} className="text-cyan-400 mx-auto opacity-50" />
@@ -82,7 +82,7 @@ const Testimonials: React.FC = () => {
 
             {/* Testimonial Content */}
             <div className="text-center mb-8">
-              <p className="text-xl md:text-2xl text-gray-300 leading-relaxed mb-6 italic">
+              <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed mb-6 italic">
                 "{current.content}"
               </p>
 
@@ -102,9 +102,9 @@ const Testimonials: React.FC = () => {
                 className="w-16 h-16 rounded-full object-cover border-4 border-cyan-400"
               />
               <div className="text-left">
-                <h4 className="text-xl font-bold text-white">{current.name}</h4>
+                <h4 className="text-xl font-bold text-gray-900 dark:text-white">{current.name}</h4>
                 <p className="text-cyan-400 font-semibold">{current.role}</p>
-                <p className="text-gray-400 text-sm">{current.company}</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm">{current.company}</p>
               </div>
             </div>
           </div>
@@ -112,14 +112,14 @@ const Testimonials: React.FC = () => {
           {/* Navigation Buttons */}
           <button
             onClick={prevTestimonial}
-            className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-slate-700/50 backdrop-blur-sm text-white rounded-full hover:bg-slate-600/50 transition-all duration-300 hover:scale-110"
+            className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-white/50 dark:bg-slate-700/50 backdrop-blur-sm text-gray-800 dark:text-white rounded-full hover:bg-white/80 dark:hover:bg-slate-600/50 transition-all duration-300 hover:scale-110"
           >
             <ChevronLeft size={24} />
           </button>
 
           <button
             onClick={nextTestimonial}
-            className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-slate-700/50 backdrop-blur-sm text-white rounded-full hover:bg-slate-600/50 transition-all duration-300 hover:scale-110"
+            className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-white/50 dark:bg-slate-700/50 backdrop-blur-sm text-gray-800 dark:text-white rounded-full hover:bg-white/80 dark:hover:bg-slate-600/50 transition-all duration-300 hover:scale-110"
           >
             <ChevronRight size={24} />
           </button>
@@ -132,7 +132,7 @@ const Testimonials: React.FC = () => {
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentTestimonial 
                     ? 'bg-cyan-400 scale-125' 
-                    : 'bg-gray-500 hover:bg-gray-400'
+                    : 'bg-gray-400 dark:bg-gray-500 hover:bg-gray-500 dark:hover:bg-gray-400'
                 }`}
                 onClick={() => setCurrentTestimonial(index)}
               />

@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-slate-900 border-t border-gray-800">
+    <footer className="bg-gray-100 dark:bg-slate-900 border-t border-gray-200 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
             <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-pink-500 to-orange-500 bg-clip-text text-transparent mb-4">
               &lt;Kuldeep Singh Rajput/&gt;
             </h3>
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-600 dark:text-gray-300 mb-6">
               Full Stack Java Developer passionate about creating innovative solutions 
               and building amazing user experiences.
             </p>
@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 bg-slate-800 text-gray-400 rounded-lg hover:bg-slate-700 hover:text-cyan-400 transition-all duration-300 hover:scale-110"
+                  className="p-2 bg-gray-200 dark:bg-slate-800 text-gray-500 dark:text-gray-400 rounded-lg hover:bg-gray-300 dark:hover:bg-slate-700 hover:text-cyan-400 transition-all duration-300 hover:scale-110"
                   aria-label={label}
                 >
                   <Icon size={20} />
@@ -48,13 +48,13 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+                    className="text-gray-600 dark:text-gray-300 hover:text-cyan-400 transition-colors duration-300"
                   >
                     {link.name}
                   </a>
@@ -65,8 +65,8 @@ const Footer: React.FC = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Get In Touch</h4>
-            <div className="space-y-2 text-gray-300">
+            <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Get In Touch</h4>
+            <div className="space-y-2 text-gray-600 dark:text-gray-300">
               <p>Indore, India</p>
               <p>kuldeeprajput2025new@gmail.com</p>
               <p>+91 9301394812
@@ -77,12 +77,12 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between">
-          <p className="text-gray-300 mb-4 md:mb-0">
+        <div className="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between">
+          <p className="text-gray-600 dark:text-gray-300 mb-4 md:mb-0">
             © 2025 Kuldeep Singh Rajput.
           </p>
           
-          <p className="text-gray-300 flex items-center">
+          <p className="text-gray-600 dark:text-gray-300 flex items-center">
             Made with <Heart size={16} className="text-red-400 mx-2 animate-pulse" /> by Kuldeep
           </p>
         </div>

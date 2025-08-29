@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Github, Linkedin, Instagram, Download } from 'lucide-react';
-import profileImage from './profile.jpg';
 
 const Hero: React.FC = () => {
   const [displayText, setDisplayText] = useState('');
@@ -49,7 +48,7 @@ const Hero: React.FC = () => {
   ];
 
   return (
-    <section id="home" className="min-h-screen relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <section id="home" className="min-h-screen relative overflow-hidden bg-gray-50 dark:bg-gradient-to-br dark:from-slate-900 dark:via-purple-900 dark:to-slate-900">
       {/* Galaxy Background */}
       <div className="absolute inset-0">
         <div className="stars"></div>
@@ -69,11 +68,11 @@ const Hero: React.FC = () => {
             {/* Left Side - Profile Image */}
             <div className="flex-shrink-0">
               <div className="relative">
-                <div className="w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden border-2 border-cyan-400 p-1 bg-slate-800/50">
+                <div className="w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden border-2 border-cyan-400 p-1 bg-white/30 dark:bg-slate-800/50">
                   <img
-                    src={profileImage}
+                    src="/certificates/M.jpg"
                     alt="Kuldeep Singh Rajput"
-                    className="w-full h-full object-cover rounded-full"
+                    className="w-full h-full object-cover rounded-full scale-125"
                   />
                 </div>
               </div>
@@ -83,7 +82,7 @@ const Hero: React.FC = () => {
             <div className="flex-1 text-center lg:text-left">
               {/* Name */}
               <div className="mb-8">
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-800 dark:text-white">
                   Kuldeep Singh Rajput
                 </h1>
               </div>
@@ -96,7 +95,7 @@ const Hero: React.FC = () => {
                 </p>
               </div>
 
-              <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl lg:max-w-none leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-12 max-w-2xl lg:max-w-none leading-relaxed">
   Crafting clean, scalable solutions and seamless user experiences with modern technologies.
 </p>
 
@@ -109,7 +108,7 @@ const Hero: React.FC = () => {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`p-4 rounded-full bg-slate-800/50 backdrop-blur-sm text-2xl text-gray-300 ${color} transition-all duration-300 hover:scale-110`}
+                    className={`p-4 rounded-full bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm text-2xl text-gray-600 dark:text-gray-300 ${color} transition-all duration-300 hover:scale-110`}
                   >
                     <Icon size={28} />
                   </a>
@@ -121,7 +120,7 @@ const Hero: React.FC = () => {
                 <a href="#projects" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full font-semibold hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 hover:scale-105 text-center">
                   View My Projects
                 </a>
-                <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-full font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2">
+                <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-full font-semibold hover:bg-cyan-400 hover:text-white dark:hover:text-slate-900 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2">
                   <Download size={20} />
                   Download Resume
                 </button>

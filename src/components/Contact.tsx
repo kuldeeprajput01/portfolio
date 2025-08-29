@@ -3,14 +3,14 @@ import { Send, Mail, MapPin, Phone } from 'lucide-react';
 
 const Contact: React.FC = () => {
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-black animated-gradient">
+    <section id="contact" className="py-20 bg-gray-50 dark:bg-gradient-to-br dark:from-slate-900 dark:via-purple-900 dark:to-black animated-gradient">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-pink-500 to-orange-500 bg-clip-text text-transparent mb-6">
             Let's Connect
           </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Ready to start your next project? Let's discuss how we can work together
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+           Hey There,
           </p>
         </div>
 
@@ -18,9 +18,9 @@ const Contact: React.FC = () => {
           {/* Contact Info */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-3xl font-bold text-white mb-6">Get in Touch</h3>
-              <p className="text-gray-300 text-lg leading-relaxed">
-                I'm always interested in new opportunities and interesting projects. 
+              <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Get in Touch</h3>
+              <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+                Always interested in new opportunities and interesting projects. 
                 Whether you're a company looking to hire, or you're looking to build something amazing, 
                 I'd love to hear from you.
               </p>
@@ -32,8 +32,8 @@ const Contact: React.FC = () => {
                   <Mail size={24} className="text-white" />
                 </div>
                 <div>
-                  <h4 className="text-white font-semibold">Email</h4>
-                  <p className="text-gray-300">kuldeeprajput2025new@gmail.com</p>
+                  <h4 className="text-gray-900 dark:text-white font-semibold">Email</h4>
+                  <p className="text-gray-600 dark:text-gray-300">kuldeeprajput2025new@gmail.com</p>
                 </div>
               </div>
 
@@ -42,8 +42,8 @@ const Contact: React.FC = () => {
                   <Phone size={24} className="text-white" />
                 </div>
                 <div>
-                  <h4 className="text-white font-semibold">Phone</h4>
-                  <p className="text-gray-300">+91 9301394812</p>
+                  <h4 className="text-gray-900 dark:text-white font-semibold">Phone</h4>
+                  <p className="text-gray-600 dark:text-gray-300">+91 9301394812</p>
                 </div>
               </div>
 
@@ -52,15 +52,15 @@ const Contact: React.FC = () => {
                   <MapPin size={24} className="text-white" />
                 </div>
                 <div>
-                  <h4 className="text-white font-semibold">Location</h4>
-                  <p className="text-gray-300">Indore, India</p>
+                  <h4 className="text-gray-900 dark:text-white font-semibold">Location</h4>
+                  <p className="text-gray-600 dark:text-gray-300">Indore, India</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 contact-form">
+          <div className="bg-white dark:bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 contact-form shadow-lg dark:shadow-none">
             <form
               action="https://formspree.io/f/mpwjajow" // <-- ⚠️ REPLACE WITH YOUR FORM ID
               method="POST"
@@ -68,28 +68,28 @@ const Contact: React.FC = () => {
             >
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Full Name
                   </label>
                   <input
                     type="text"
                     id="name"
                     name="name"
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 bg-gray-100 dark:bg-slate-700/50 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
                     placeholder="Your name"
                     required
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Email Address
                   </label>
                   <input
                     type="email"
                     id="email"
                     name="email"
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 bg-gray-100 dark:bg-slate-700/50 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
                     placeholder="your.email@example.com"
                     required
                   />
@@ -97,27 +97,27 @@ const Contact: React.FC = () => {
               </div>
 
               <div>
-                <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-300 mb-2">
+                <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Phone Number
                 </label>
                 <input
                   type="tel"
                   id="phoneNumber"
                   name="phoneNumber"
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
+                  className="w-full px-4 py-3 bg-gray-100 dark:bg-slate-700/50 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
                   placeholder="Your phone number"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Message
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   rows={6}
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 resize-none"
+                  className="w-full px-4 py-3 bg-gray-100 dark:bg-slate-700/50 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 resize-none"
                   placeholder="Tell me about your project..."
                   required
                 />

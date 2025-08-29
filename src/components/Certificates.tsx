@@ -106,13 +106,13 @@ const Certificates: React.FC = () => {
 
   return (
     <>
-      <section id="certificates" className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <section id="certificates" className="py-20 bg-gray-50 dark:bg-gradient-to-br dark:from-slate-900 dark:via-purple-900 dark:to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-pink-500 to-orange-500 bg-clip-text text-transparent mb-6">
               Certifications
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               Professional certifications that validate my expertise
             </p>
           </div>
@@ -156,11 +156,11 @@ const Certificates: React.FC = () => {
 
           {/* Individual Certificate Modal */}
           {showModal && selectedCert && (
-            <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-              <div className="bg-slate-800 rounded-2xl p-8 max-w-2xl w-full relative">
+            <div className="fixed inset-0 bg-black/70 dark:bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+              <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 max-w-2xl w-full relative shadow-2xl">
                 <button
                   onClick={() => setShowModal(false)}
-                  className="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl"
+                  className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white text-2xl"
                 >
                   ×
                 </button>
@@ -171,10 +171,10 @@ const Certificates: React.FC = () => {
                   </div>
 
                   <div className="text-center">
-                    <h3 className="text-3xl font-bold text-white mb-4">{selectedCert.title}</h3>
+                    <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">{selectedCert.title}</h3>
                     <p className="text-xl text-cyan-400 font-semibold mb-2">{selectedCert.issuer}</p>
-                    <p className="text-gray-400 mb-6">Issued: {selectedCert.date}</p>
-                    <p className="text-gray-300 text-lg mb-8">{selectedCert.description}</p>
+                    <p className="text-gray-500 dark:text-gray-400 mb-6">Issued: {selectedCert.date}</p>
+                    <p className="text-gray-700 dark:text-gray-300 text-lg mb-8">{selectedCert.description}</p>
                     
                     <div className="flex justify-center space-x-4">
                       <a 
@@ -197,15 +197,15 @@ const Certificates: React.FC = () => {
 
       {/* All Certificates Modal */}
       {showAllModal && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-slate-900 rounded-2xl max-w-7xl w-full max-h-[90vh] overflow-y-auto">
-            <div className="sticky top-0 bg-slate-900 p-6 border-b border-slate-700 flex justify-between items-center">
+        <div className="fixed inset-0 bg-black/70 dark:bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-gray-50 dark:bg-slate-900 rounded-2xl max-w-7xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+            <div className="sticky top-0 bg-gray-50/80 dark:bg-slate-900/80 backdrop-blur-md p-6 border-b border-gray-200 dark:border-slate-700 flex justify-between items-center">
               <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 via-pink-500 to-orange-500 bg-clip-text text-transparent">
                 All Certificates
               </h2>
               <button
                 onClick={() => setShowAllModal(false)}
-                className="p-2 hover:bg-slate-800 rounded-full transition-colors"
+                className="p-2 hover:bg-gray-200 dark:hover:bg-slate-800 rounded-full transition-colors"
               >
                 <X size={24} className="text-gray-400" />
               </button>

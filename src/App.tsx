@@ -5,31 +5,32 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Education from './components/Education';
 import Experience from './components/Experience';
-import Testimonials from './components/Certificates';
+import Certificates from './components/Certificates';
 import Stats from './components/Stats';
+import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import CursorEffect from './components/CursorEffect';
-import { ThemeProvider } from './context/ThemeContext';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <ThemeProvider>
-      <div className="relative">
-        <CursorEffect />
-        <Navbar />
+    <>
+      <CursorEffect />
+      <Navbar />
+      <main>
         <Hero />
+        <Stats />
         <Skills />
         <Projects />
-        <Education />
         <Experience />
-        <Testimonials />
-        <Stats />
+        <Education />
+        <Certificates />
+        {/* <Testimonials /> */}
         <Contact />
-        <Footer />
-      </div>
-    </ThemeProvider>
+      </main>
+      <Footer />
+    </>
   );
-}
+};
 
 export default App;
